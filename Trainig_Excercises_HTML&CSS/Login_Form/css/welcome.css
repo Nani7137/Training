@@ -1,0 +1,22 @@
+body {
+	background : url("photo-1529539795054-3c162aab037a.jpeg") no-repeat;  
+	background-size : cover;
+}
+.welcome h1 {
+    max-width : 1800px;
+	width : 100%;
+	height : 80vh;
+	font-size : 50px;	
+	text-align : center;
+	text-transform : uppercase;
+	color : white;
+	font-family : 'Arial';
+	display : flex;
+	align-items :center; 
+	justify-content : center;
+}
+a {
+	font-size : 20px;	
+	color : white;
+	font-family : 'Arial';
+}
