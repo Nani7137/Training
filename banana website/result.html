@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Result Page</title>
+    <link rel="stylesheet" href="css/result.css">
+</head>
+<body>
+    <h1>Customer Bill Details</h1>
+    <form>
+        <label id="l1">Customer_First_Name : </label>
+        <textarea id="n1"></textarea><br /><br />
+        <label id="l2">Customer_Last_Name : </label>
+        <textarea id="n2"></textarea><br /><br />
+        <label id="l3">Address : </label>
+        <textarea id="n3"></textarea><br /><br />
+        <label id="l4">Quantity : </label>
+        <textarea id="n4"></textarea><br /><br />
+        <label id="l5">Fruit : </label>
+        <textarea id="n5"></textarea><br /><br />
+        <label id="l6"> Price : </label>
+        <textarea id="n6"></textarea><br /><br />
+        <center><a title="print screen" alt="print screen" onclick="window.print()" target="_blank_" style="cursor:pointer;" ><label id="l7">Print</label></a></center>
+
+    </form>
+    <script>
+        document.getElementById("n1").innerHTML = sessionStorage.getItem("FIRST_NAME");
+        document.getElementById("n2").innerHTML = sessionStorage.getItem("LAST_NAME");
+        document.getElementById("n3").innerHTML = sessionStorage.getItem("ADDRESS");
+        document.getElementById("n4").innerHTML = sessionStorage.getItem("QUANTITY");
+        document.getElementById("n5").innerHTML = sessionStorage.getItem("FRUIT");
+        document.getElementById("n6").innerHTML = sessionStorage.getItem("PRICE");
+    </script>
+</body>
+</html>

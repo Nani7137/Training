@@ -1,0 +1,105 @@
+﻿body {
+    background: url("buying-cheerful-customers-discount.jpg") no-repeat;
+    background-size: cover;
+}
+h1 {
+    text-align: center;
+    color: orange;
+    padding: 20px;
+    font-size: 40px;
+    text-transform:uppercase;
+}
+#l1 {
+    color: white;
+    font-size: 19px;
+    padding-left:450px;
+    color:black;
+}
+#l2 {
+    color: white;
+    font-size: 19px;
+    padding-left: 450px;
+    color: black;
+}
+#l3 {
+    color: white;
+    font-size: 19px;
+    padding-left: 450px;
+    color: black;
+}
+#l4 {
+    color: white;
+    font-size: 19px;
+    padding-left: 450px;
+    color: black;
+}
+#l5 {
+    color: white;
+    font-size: 19px;
+    padding-left: 450px;
+    color: black;
+}
+#l6 {
+    color: white;
+    font-size: 19px;
+    padding-left: 450px;
+    color: black;
+}
+#n1 {
+    width: 200px;
+    height: 25px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+#n2 {
+    width: 200px;
+    height: 25px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+#n3 {
+    width: 200px;
+    height: 25px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+#n4 {
+    width: 200px;
+    height: 25px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+#n5 {
+    width: 200px;
+    height: 25px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+#n6 {
+    width: 200px;
+    height: 25px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+a {
+
+    border: none;
+    border-radius: 17px;
+    
+    color: black;
+    
+    text-align: center;
+    color: black;
+    background: white;
+}
+#l7{
+    padding-left:20px;
+    padding-right:20px;
+}

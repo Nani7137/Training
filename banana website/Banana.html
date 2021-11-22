@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Banana</title>
+    <script type="text/javascript" src="js/index.js"></script>
+    <link rel="stylesheet" href="css/fruits.css">
+</head>
+<body>
+    <h1>ENTER YOUR DETAILS</h1>
+    <div class="registration">
+    <form action="result.html" method="post">
+        <label>Enter Your First Name : </label>
+        <input type="text" id="fname" name="fname" /><br /><br />
+        <label>Enter Your Last Name : </label>
+        <input type="text" id="lname" name="lname" /><br /><br />
+        <label>Enter Your Address : </label>
+        <textarea id="ads" name="ads"></textarea><br /><br />
+        <label>Select The Quantity : </label>
+        <select id="qty" onchange="result()">
+            <option value="">slect qty</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+            <option value=6>6</option>
+            <option value=7>7</option>
+            <option value=8>8</option>
+            <option value=9>9</option>
+            <option value=10>10</option>
+            <option value="">max-10-only</option>
+        </select><br /><br />
+        <label>Select The Fruit : </label>
+        <select id="frt">
+            <option value="">slect fruit</option>
+            <option value="Banana">Banana</option>
+        </select><br /><br />
+        <label>Price : </label>
+        <textarea id="price" name="price"></textarea> <br /><br />
+        <center><input type="submit" id="sbmt" value="Add To Bill" onclick="handleSubmit()" /></center>
+        <!-- onclick = "AddRow()"-->
+    </form></div>
+    <!--<table id="show" border="2px">
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Address</th>
+            <th>Quantity</th>
+            <th>Fruit</th>
+            <th>Price</th>
+
+        </tr>
+    </table>-->
+    <script>
+        
+
+        
+        
+        function result() {
+            var qty = document.getElementById("qty").value;
+            var res = qty * 150;
+            //document.write(res);
+            document.getElementById('price').innerHTML = res;
+        }
+    </script>
+    <script>
+       /* var list1 = [];
+        var list2 = [];
+        var list3 = [];
+        var list4 = [];
+        var list5 = [];
+
+        var n = 1;
+        var x = 0;
+
+        function AddRow() {
+            var AddRow = document.getElementById('show');
+            var NewRow = AddRow.insertRow(n);
+
+            list1[x] = document.getElementById("fname").value;
+            list2[x] = document.getElementById("lname").value;
+            list3[x] = document.getElementById("ads").value;
+            list4[x] = document.getElementById("qty").value;
+            list5[x] = document.getElementById("ban").value;
+            
+
+            var cel1 = NewRow.insertCell(0);
+            var cel2 = NewRow.insertCell(1);
+            var cel3 = NewRow.insertCell(2);
+            var cel4 = NewRow.insertCell(3);
+            var cel5 = NewRow.insertCell(4);
+
+            cel1.innerHTML = list1[x];
+            cel2.innerHTML = list2[x];
+            cel3.innerHTML = list3[x];
+            cel4.innerHTML = list4[x];
+            cel5.innerHTML = list5[x];
+
+            n++;
+            x++;
+
+        }*/
+    </script> 
+</body>
+</html>

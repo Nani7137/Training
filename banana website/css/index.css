@@ -1,0 +1,48 @@
+﻿body {
+    background: url("photo-1593047725920-43a0f206b593.jfif") no-repeat;
+    background-size:cover;
+}
+.banana img{
+    width:370px;
+    height:370px;
+}
+.banana {
+    bottom: 300px;
+    text-align: left;
+    position: absolute;
+    border: 0px solid;
+    padding-left: 870px;
+    height: 200px;
+}
+.pineapple {
+    bottom: 300px;
+    text-align: left;
+    position: absolute;
+    border: 0px solid;
+    padding-left: 430px;
+    height: 200px;
+}
+.pineapple img{
+    height:370px;
+    width :420px;
+}
+.apple img{
+    width:370px;
+
+}
+.apple {
+    bottom: 300px;
+    text-align: left;
+    position: absolute;
+    border: 0px solid;
+    padding-left: 20px;
+    height: 200px;
+}
+figcaption{
+    color:white;
+}
+h1{
+    text-align:center;
+    font-size:50px;
+    color:whitesmoke;
+}

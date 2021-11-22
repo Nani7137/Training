@@ -5,64 +5,106 @@
     <meta charset="utf-8" />
     <title>User_Give_Imp_Dis_Dyn</title>
     <script>
+        function validate() {
+            var ptn = /^\d{10}$/;
+            if (document.myform.mbno.value.match(ptn)) {
+                return true;
+            } else {
+                alert("Please Enter 10 digits only !");
+                return false;
+            }
+            /*if (document.myform.name.value == "") {
+                alert("Please provide your name!");
+                document.myForm.name.focus();
+            }
+            else if (document.myform.mbno.value == "") {
+                    alert("Please provide your mbno!");
+                document.myForm.name.focus();
+            }
+            else if (document.myform.date.value == "") {
+                alert("Please provide your date!");
+                document.myForm.name.focus();
+                return false;
+            }*/
+        }
         function User_Det() {
             
-                var msg = document.getElementById("p1");
-                var name = document.getElementById("name").value;
-                var email = document.getElementById("email").value;
-                var dob = document.getElementById("dob").value;
-                var mbno = document.getElementById("mbno").value;
-                var course = document.getElementById("course").value;
-                msg.innerHTML = " ";
-
-
-            try {
-                document.write("Name is : " + ame);
-                document.write("<br><br>Email Address is : " + email);
-                document.write("<br><br>Date Of Birth Is : " + dob);
-                document.write("<br><br>Mobile Number is : " + mbno);
-
+            //var msg = document.getElementById("p1");
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var dob = document.getElementById("dob").value;
+            var mbno = document.getElementById("mbno").value;
+            var course = document.getElementById("selt1").value;
+            var stream = document.getElementById("selt2").value;
             
-                if (course == "MCA") {
-                    document.write("<br><br>" + course + " : " + "Your stream is Computerscience");
-                } else if (course == "B.Tech") {
-                    document.write("<br><br>" + course + " : " + "Your stream is Computerscience");
-                } else if (course == "B.Com") {
-                    document.write("<br><br>" + course + " : " + "Your stream is Accounts");
-                } else if (course == "B.Sc") {
-                    document.write("<br><br>" + course + " : " + "Your stream is Science");
-                }
-            } catch (err) {
-                msg.innerHTML = "This is an Catch Block " + err;
-                
-            } finally {
-                msg.innerHTML = "This is an Finally Block ";
-            }
-            
+            document.write("Name is : " + name);
+            document.write("<br><br>Email Address is : " + email);
+            document.write("<br><br>Date Of Birth Is : " + dob);
+            document.write("<br><br>Mobile Number is : " + mbno);
+            document.write("<br><br>Course Name is : " + course);
+            document.write("<br><br>Stream Name is : " + stream);
+   
         }
+        function populate(s1, s2) {
+            var s1 = document.getElementById(s1);
+            var s2 = document.getElementById(s2);
+            //document.write(s1.value);
+            s2.innerHTML = "";
+            if (s1.value == "btech") {
+                var optionArray = ["|", "ece|ECE", "cse|CSE", "eee|EEE", "mech|MECH"]
+            } else if (s1.value == "mca") {
+                var optionArray = ["|", "mca|MCA"]
+            } else if (s1.value == "bsc") {
+                var optionArray = ["|", "mpcs|MPCS", "mecs|MECS", "mpc|MPC", "bca|BCA", "cbz|CBZ"]
+            } else if (s1.value == "bcom") {
+                var optionArray = ["|", "vocational|VOCATIONAL", "general|GENERAL"]
+            }
+
+            for (var option in optionArray) {
+                var pair = optionArray[option].split("|");
+                var newOption = document.createElement("option");
+                newOption.value = pair[0];
+                newOption.innerHTML = pair[1];
+                s2.options.add(newOption);
+            }
+        }
+        document.getElementById("sbmt").addEventListener("click", User_Det);
     </script>
 </head>
 <body>
-    <form>
+    <form name="myform" onsubmit="return (validate())">
         <label>Enter Your Name : </label>
-        <input type="text" id="name" /><br /><br />
+        <input type="text" id="name" name="name" /><br /><br />
         <label>Enter Your empId : </label>
-        <input type="email" id="email" /><br /><br />
+        <input type="email" id="email" required /><br /><br />
         <label>Enter Your DOB : </label>
-        <input type="date" id="dob" /><br /><br />
+        <input type="date" id="dob" name="date" /><br /><br />
         <label>Enter Your Mobile No : </label>
-        <input type="text" id="mbno" /><br /><br />
+        <input type="text" id="mbno" name="mbno" /><br /><br />
         <label>Enter Your Course : </label>
-        <select name="Course" id="course">
-            <option value=1 selected="true">SelectOne</option>
-            <option value="MCA">MCA</option>
-            <option value="B.Tech">B.Tech</option>
-            <option value="B.Com">B.Com</option>
-            <option value="B.Sc">B.Sc</option>
+        <select id="selt1" name="selt1" onchange="populate(this.id,'selt2')">
+            <option value="">SelectOne</option>
+            <option value="mca">mca</option>
+            <option value="btech">btech</option>
+            <option value="bcom">bcom</option>
+            <option value="bsc">bsc</option>
         </select><br><br>
+        <label>Select Your Stream : </label>
+        <select id="selt2" name="selt2"></select><br /><br />
+
+
+        <!-- <option value=1 selected="true">SelectOne</option>
+        <option value="MCA">MCA</option>
+        <option value="B.Tech">B.Tech</option>
+        <option value="B.Com">B.Com</option>
+        <option value="B.Sc">B.Sc</option>
+    </select><br><br>
+            onclick="User_Det()"-->
         <p id="p1"></p>
 
-        <input type="button" onclick="User_Det()" value="submit" /><br><br>
+        <input type="submit" id="sbmt"  />
+        <br>
+        <br>
 
     </form>
 </body>
