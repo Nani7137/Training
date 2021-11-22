@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/Registration.css">
+    <title>Hotel Booking Registration Form</title>
+    <script>
+        function Output1() {
+            var int1 = document.getElementById("in1");
+            
+            document.getElementById("op").innerHTML = int1.value;
+
+        }
+        function Output2() {
+            var int2 = document.getElementById("in2");
+
+            document.getElementById("op").innerHTML = int2.value;
+        }
+        function Output3() {
+            var int3 = document.getElementById("in3");
+
+            document.getElementById("op").innerHTML = int3.value;
+        }
+        function Output4() {
+            var int4 = document.getElementById("in4");
+
+            document.getElementById("op").innerHTML = int4.value;
+        }
+        function Output5() {
+            var int5 = document.getElementById("in5");
+
+            document.getElementById("op").innerHTML = int5.value;
+        }
+        function Output6() {
+            var int6 = document.getElementById("in6");
+
+            document.getElementById("op").innerHTML = int6.value;
+        }
+        function Output7() {
+            var int7 = document.getElementById("in7");
+
+            document.getElementById("op").innerHTML = int7.value;
+        }
+        function Output8() {
+            var int8 = document.getElementById("in8");
+
+            document.getElementById("op").innerHTML = int8.value;
+        }
+    </script>
+</head>
+ <body>
+ <h1>ENTER YOUR DETAILS</h1>
+ <div class="registration">
+     <form action="welcome.html" method="GET">
+
+         <label>Customer Name &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</label>
+         <input type="text" name="name" id="name" pattern="[A-Za-z0-9 ]{1,15}" required><br><br>
+
+         <label>Address &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</label>
+         <input type="text" name="ads" id="name" pattern="[A-Za-z0-9 ]{1,15}" required><br><br>
+
+         <label>Phone Number &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</label>
+         <input type="text" name="name" id="name" pattern=""[7-9]{1}[0-9]{9}" required><br><br>
+
+         <label>Mobile Number Name &nbsp&nbsp:</label>
+         <input type="text" name="name" id="name" pattern=""[7-9]{1}[0-9]{9}" required><br><br>
+
+         <label>Email &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</label>
+         <input type="email" name="name" id="name" required><br><br>
+
+         <label>How Many Days &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</label>
+         <input type="number" name="taskid" id="taskid" pattern="{1,4}" required><br><br>
+
+         <label>No.of Persons &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</label>
+         <input type="number" name="taskid" id="taskid" pattern="{1,4}" required><br><br>
+
+         
+
+         <table>
+             <tr>
+                 <th> Accommodation </th>
+                 <th> tariff per night </th>
+             </tr>
+             <tr>
+                 <td>Single accommodation with AC</td>
+                 <td align="center">
+                     <input type="button" id="in1" value="2000" onclick="Output1()" />
+                 </td>
+             </tr>
+             <tr>
+                 <td>
+                     Single accommodation without AC
+                 </td>
+                 <td align="center">
+                     <input type="button" id="in2" value="2500" onclick="Output2()" />
+                 </td>
+             </tr>
+             <tr>
+                 <td>
+                     double accommodation with AC
+                 </td>
+                 <td align="center">
+
+                     <input type="button" id="in3" value="5000" onclick="Output3()" />
+
+                 </td>
+             </tr>
+             <tr>
+                 <td>
+                     double accommodation without AC
+                 </td>
+                 <td align="center">
+                     <input type="button" id="in4" value="4000" onclick="Output4()" />
+
+                 </td>
+             </tr>
+             <tr>
+                 <td>
+                     Extra bed
+                 </td>
+                 <td align="center">
+                     <input type="button" id="in5" value="500" onclick="Output5()" />
+
+                 </td>
+             </tr>
+             <tr>
+                 <td>
+                     dormitory  (6 persons)
+                 </td>
+                 <td align="center">
+                     <input type="button" id="in6" value="6000" onclick="Output6()" />
+                 </td>
+             </tr>
+             <tr>
+                 <td>
+                     dormitory  (12 persons)
+                 </td>
+                 <td align="center">
+                     <input type="button" id="in7" value="10000" onclick="Output7()" />
+                 </td>
+             </tr>
+             <tr>
+                 <td>
+                     dormitory  (20 persons)
+                 </td>
+                 <td align="center">
+                     <input type="button" id="in8" value="20000" onclick="Output8()" />
+                 </td>
+             </tr>
+         </table><br />
+
+         <label>Your Price is &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  : </label>
+         <textarea id="op"></textarea><br /><br />
+
+
+
+         <center><input type="submit" name="log" id="log" value="Enter"></center>
+</div>
+</body>
+</html>
