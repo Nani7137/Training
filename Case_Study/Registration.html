@@ -3,36 +3,47 @@
  <head>
   <link rel="stylesheet" href="css/Registration.css">
   <title>Registration</title>
+     <script>
+         function validate() {
+             if (document.myform.name.value == "") {
+                 alert("Please provide your name!");
+                 document.myform.name.focus();
+           
+                 return false;
+             }
+         }
+         //action="welcome.html" method="GET" 
+     </script>
  </head>
  <body>
  <h1>ENTER YOUR DETAILS</h1>
  <div class="registration">
-  <form action="welcome.html" method="GET">
+  <form name="myform" onsubmit="return (validate())">
   
   <label>Name &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</label>
-  <input type = "text" name="name" id="name" pattern="[A-Za-z0-9 ]{1,15}" required><br><br>
+  <input type = "text" name="name" id="name" pattern="[A-Za-z0-9 ]{1,15}"><br><br>
   
   <label>Task ID &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</label>
-  <input type="number" name="taskid" id="taskid" pattern="{1,4}" required><br><br>
+  <input type="number" name="taskid" id="taskid" pattern="{1,4}"><br><br>
 
   <label>Description &nbsp&nbsp&nbsp:</label>
   <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
 
   <label>Status &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</label>
-  <select name="status" value="status" id="status" required><option>
+  <select name="status" value="status" id="status"><option>
   <option value=1 selected="true">SelectOne
-  <option value=2>Close
-  <option value=3>In Progress
-  <option value=4>Cancelled
-  <option value=5>On Hold
+  <option value="Close">Close
+  <option value="In Progress">In Progress
+  <option value="Cancelled">Cancelled
+  <option value="On Hold">On Hold
   </select><br><br>
 
   <label>Priority &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</label>
-  <select name="priority" value="priority" id="priority" required><option>
+  <select name="priority" value="priority" id="priority"><option>
   <option value=1 selected="true">Select One
-  <option value=2>1-High
-  <option value=3>2-Medium
-  <option value=4>3-Low
+  <option value="1-High">1-High
+  <option value="2-Medium">2-Medium
+  <option value="3-Low">3-Low
   </select><br><br>
 
   <label>Notes &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</label>
@@ -42,16 +53,16 @@
   <textarea id="bookmark" name="bookmark" rows="4" cols="50"></textarea><br><br>
 
   <label>Owner ID &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</label>
-  <input type="number" name="ownerid" id="ownerid" pattern="{1,4}" required><br><br>
+  <input type="number" name="ownerid" id="ownerid" pattern="{1,4}" ><br><br>
 
   <label>Creater ID &nbsp&nbsp&nbsp&nbsp&nbsp:</label>
-  <input type="number" name="createrid" id="createrid" pattern="{1,4}" required><br><br>
+  <input type="number" name="createrid" id="createrid" pattern="{1,4}" ><br><br>
 
   <label>Created On &nbsp&nbsp&nbsp&nbsp:</label>
-  <input type="date" id="createdon" required><br><br>
+  <input type="date" id="createdon" ><br><br>
   
   <label>Modified On &nbsp&nbsp:</label>
-  <input type="date" id="modifiedon" required><br><br><br><br>
+  <input type="date" id="modifiedon" ><br><br><br><br>
 
 
   <center><input type="submit" name="log" id="log" value="Log In Here"></center> 
