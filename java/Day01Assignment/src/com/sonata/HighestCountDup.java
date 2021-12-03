@@ -16,7 +16,7 @@ public class HighestCountDup {
 					 maxCounter=counter;
 					 element = arrA[i];
 				 }
-		 }
+			 }
 		 System.out.println("Element repeating maximum no of times: " + element + ", maximum count: " + maxCounter);
 		 }
 
