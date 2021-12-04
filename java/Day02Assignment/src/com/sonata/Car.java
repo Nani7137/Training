@@ -1,8 +1,8 @@
-package com.sonata.car;
+package com.sonata;
 
 public class Car {
 	int speed;
-	public static double regularPrice;
+	static double regularPrice;
 	String color;
 	
 	public Car(){
@@ -15,16 +15,17 @@ public class Car {
 		this.color = c;
 	}
 	
-	public static double getSalePrice(float percent) {
+	public double getSalePrice(float percent) {
 		double gst = percent/100;
+		
 		double totalgst = gst * regularPrice;
 		double total = totalgst + regularPrice;
 		return total;
 	}
 	public void display() {
-		System.out.println("The Car Speed is "+speed);
-		System.out.println("The Car Regular Price is "+regularPrice);
-		System.out.println("The Car Color is "+color);
+		System.out.println("The Car Speed is : "+speed);
+		System.out.println("The Car Regular Price is : "+regularPrice);
+		System.out.println("The Car Color is : "+color);
 	}
 
 }

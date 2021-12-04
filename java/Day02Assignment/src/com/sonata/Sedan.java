@@ -1,8 +1,8 @@
-package com.sonata.fordandsedan;
-import com.sonata.car.Car;
+package com.sonata;
 
-public class Sedan {
-	int length;
+
+public class Sedan extends Car {
+		int length;
 	
 	public Sedan(int a){
 		this.length = a;
@@ -10,10 +10,10 @@ public class Sedan {
 	
 	public double getSalePrice() {
 		if(this.length>20) {
-			return Car.getSalePrice(5f);
+			return super.getSalePrice(5f);
 		}
 		else {
-			return Car.getSalePrice(10f);
+			return super.getSalePrice(10f);
 		}
 	}
 	
